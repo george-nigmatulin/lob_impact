@@ -1,5 +1,39 @@
 # lob_impact
 
+Code for **LOB-Impact Benchmark: Emergent Market Impact in Generative Limit Order Book
+Models**, oral at ACM ICAIF '26 (Milan).
+
+George Nigmatulin, Valentin Mohl, Sascha Frey, Kang Li, Aramis Marti-Shahandeh,
+Mihai Cucuringu, Anisoara Calinescu, Jakob Foerster, Stefan Zohren.
+
+[Paper (arXiv:2610.27100)](https://arxiv.org/abs/2610.27100) ·
+[Project page](https://george-nigmatulin.github.io/lob_impact/)
+
+![The benchmark: inputs, the three phases of a run, and the five claims it tests](docs/benchmark.png)
+
+<details>
+<summary>BibTeX</summary>
+
+```bibtex
+@inproceedings{nigmatulin2026lobimpact,
+  title         = {{LOB-Impact Benchmark}: Emergent Market Impact in Generative
+                   Limit Order Book Models},
+  author        = {Nigmatulin, George and Mohl, Valentin and Frey, Sascha and Li, Kang
+                   and Marti-Shahandeh, Aramis and Cucuringu, Mihai and Calinescu, Anisoara
+                   and Foerster, Jakob and Zohren, Stefan},
+  booktitle     = {Proceedings of the 7th ACM International Conference on AI in Finance
+                   (ICAIF '26)},
+  publisher     = {ACM},
+  year          = {2026},
+  doi           = {10.1145/3858063.3858909},
+  eprint        = {2610.27100},
+  archivePrefix = {arXiv},
+  primaryClass  = {q-fin.TR}
+}
+```
+
+</details>
+
 **Does your generative limit-order-book model reproduce market impact?**
 
 Distributional metrics, such as those of [LOB-Bench](https://github.com/peernagy/lob_bench),
@@ -164,4 +198,5 @@ common length.
 
 ## Licence and citation
 
-Apache License 2.0, see `LICENSE` and `NOTICE`. To cite, see `CITATION.cff`.
+Apache License 2.0, see `LICENSE` and `NOTICE`. To cite the paper, use the BibTeX at the
+top; the software citation is in `CITATION.cff`.
