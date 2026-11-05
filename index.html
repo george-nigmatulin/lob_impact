@@ -106,13 +106,6 @@ td.ladder { letter-spacing: 0.35em; }
 
 ol.steps { margin: 0; padding-left: 1.3em; display: grid; gap: 8px; }
 
-.bib { position: relative; }
-.bib pre { background: var(--tint); border-radius: 6px; padding: 18px 20px; overflow-x: auto;
-           font: 14px/1.5 ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; margin: 0; }
-.bib button { position: absolute; top: 10px; right: 10px; font: 600 13px/1 var(--sans);
-              color: var(--accent); background: var(--bg); border: 1px solid var(--rule);
-              border-radius: 999px; padding: 7px 12px; cursor: pointer; }
-
 .refs { font: var(--small)/1.5 var(--sans); color: var(--muted); margin: 0; padding-left: 1.4em;
         display: grid; gap: 4px; }
 footer { font: var(--small)/1.5 var(--sans); color: var(--muted); text-align: center; }
@@ -225,22 +218,6 @@ footer { font: var(--small)/1.5 var(--sans); color: var(--muted); text-align: ce
     <p class="note">The open-source package holds the protocol, calibration, estimators, controls and reporting rules. Commands are in the <a href="https://github.com/george-nigmatulin/lob_impact">code repository</a>.</p>
   </section>
 
-  <section class="read" aria-labelledby="cite">
-    <h2 id="cite">Citation</h2>
-    <div class="bib">
-      <pre id="bibtex">@misc{nigmatulin2026lobimpact,
-  title  = {{LOB-Impact Benchmark}: Emergent Market Impact in
-            Generative Limit Order Book Models},
-  author = {Nigmatulin, George and Mohl, Valentin and Frey, Sascha
-            and Li, Kang and Marti-Shahandeh, Aramis and Cucuringu, Mihai
-            and Calinescu, Anisoara and Foerster, Jakob and Zohren, Stefan},
-  note   = {Poster, QuantMinds International 2026, London},
-  year   = {2026}
-}</pre>
-      <button type="button" id="copy-bib">Copy</button>
-    </div>
-  </section>
-
   <section class="read" aria-labelledby="refs">
     <h2 id="refs">References</h2>
     <ol class="refs">
@@ -255,24 +232,5 @@ footer { font: var(--small)/1.5 var(--sans); color: var(--muted); text-align: ce
   </footer>
 </div>
 
-<script>
-(function () {
-  var button = document.getElementById("copy-bib");
-  var source = document.getElementById("bibtex");
-  if (!button || !source) return;
-  button.addEventListener("click", function () {
-    var text = source.textContent;
-    var done = function () { button.textContent = "Copied"; setTimeout(function () { button.textContent = "Copy"; }, 1600); };
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(done, function () { select(); });
-    } else { select(); }
-    function select() {
-      var range = document.createRange(); range.selectNodeContents(source);
-      var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(range);
-      button.textContent = "Selected, press Ctrl+C";
-    }
-  });
-})();
-</script>
 </body>
 </html>
